@@ -1,0 +1,5 @@
+name = Enjoy Credits
+description = Adds a couple blocks to give credit to Enjoy Creativity for creating a particular website. The footer block is subtle and used for client projects. The sidebar block is used for internal projects.
+core = 7.x
+version = 1.1
+package = "Enjoy Creativity"

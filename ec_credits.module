@@ -1,0 +1,38 @@
+<?php
+/**
+ * Implements hook_block_info().
+ */
+function ec_credits_block_info() {
+  $blocks['ec_credits_footer'] = array(
+    'info' => t('Enjoy Credits: Footer'),
+  );
+  $blocks['ec_credits_sidebar'] = array(
+    'info' => t('Enjoy Credits: Sidebar'),
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function ec_credits_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'ec_credits_footer':
+      $block['subject'] = '';
+      $block['content'] = '<a href="http://www.enjoycreativity.com" title="Church and ministry sites in Drupal by Enjoy Creativity">Church and ministry sites in Drupal by Enjoy Creativity</a>';
+      break;
+    case 'ec_credits_sidebar':
+      $block['subject'] = 'Brought to you by';
+      $block['content'] = '<p><a href="http://www.enjoycreativity.com" title="Church and ministry sites in Drupal by Enjoy Creativity"><img src="https://dl.dropboxusercontent.com/u/1862915/K33P/logo-178-with-space.png" alt="Enjoy Creativity" width="178" height="54" /></a></p>
+        <p>Enjoy Creativity is a nonprofit with the purpose of serving churches and ministries through the use and enrichment of open source technologies. We use Drupal to create websites that are beautiful, easy to use, and easy to maintain. We provide services in the areas of consulting, design, development, training, support and hosting.</p>
+        <p><a href="http://www.enjoycreativity.com" title="Church and ministry sites in Drupal by Enjoy Creativity">See how Enjoy Creativity can help with your church or ministry site.</a></p>';
+      break;
+  }
+
+  return $block;
+}
+
+?>
