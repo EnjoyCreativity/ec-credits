@@ -13,6 +13,14 @@ INSTALLATION
  * Install as you would normally install a contributed drupal module. See:
    https://drupal.org/documentation/install/modules-themes/modules-7
    for further information.
+ * If you're using this in a bash script, feel free to use the following
+   code to download and place this module where it needs to go:
+
+      wget https://github.com/EnjoyCreativity/ec-credits/archive/master.zip;
+      unzip master.zip;
+      mv ec-credits-master sites/all/modules/ec_credits;
+      rm -rf master.zip;
+
  * Place the blocks where you'd like to put them.
 
 CONFIGURATION
